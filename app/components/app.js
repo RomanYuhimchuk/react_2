@@ -8,7 +8,7 @@ var App = React.createClass({
 						display : "flex",
 						flexDirection: "row",
 						justifyContent: "space-around",
-						backgroundColor : this.props.number%2 === 0 ? "#ECF4F7" : "#98BFF0",
+						backgroundColor : this.props.number % 2 === 0 ? "#ECF4F7" : "#98BFF0",
 					},
 					number: {
 						width : "10%"
@@ -17,7 +17,7 @@ var App = React.createClass({
 						width: "30%"
 					},
 					img : {
-						background: "url(" + arr.img + ")",
+						backgroundImage: "url(" + arr.img + ")",
 						backgroundSize: "contain",
 						backgroundPosition: "center center",
 						width: 100,
@@ -28,8 +28,8 @@ var App = React.createClass({
 		return(
 			<li style={listStyle.li}> 
 				<div style={listStyle.number} >{this.props.number}</div>
-				<div style={listStyle.textBlocks} ><div style={listStyle.img} ></div>{arr.username}</div>
-				<div cstyle={listStyle.textBlocks} >{arr.recent}</div>
+				<div style={listStyle.textBlocks} > <a href={'https://www.freecodecamp.com/'+arr.username} ><div style={listStyle.img} ></div>{arr.username}</a></div>
+				<div style={listStyle.textBlocks} >{arr.recent}</div>
 				<div style={listStyle.textBlocks} >{arr.alltime}</div>
 			</li>
 		);
